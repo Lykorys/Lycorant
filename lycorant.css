@@ -1,0 +1,1153 @@
+/*
+ * @name 𝕃𝕪𝕔𝕠𝕣𝕒𝕟𝕥
+ * @author Lycoris
+ * @version 1.0.0
+ * @description aaaaaaa
+*/
+
+
+
+/****ADDONS****/
+/*@import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css");*/
+@import url("https://warrayquipsome.github.io/Chillax/ChillaxTag.css");
+@import url("https://warrayquipsome.github.io/Chillax/Addons/SettingsModalEdited.css");
+/*SettingsModalEdited addon qui permet d'avoir les settings au milieu*/
+/*removable addons*/
+/*@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');*/
+@import url('https://nyri4.github.io/Discolored/main.css');
+@import url("https://warrayquipsome.github.io/Chillax/Addons/IconPackEdited.css");
+@import url("https://dablulite.github.io/css-snippets/AccountDetailsGrid/import.css");
+/****GOOGLE/BD FONTS****/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://nfld99.github.io/Better-Discord/Source_Code/Addons/Use_Fonts/DiscordFont.css");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128&family=Libre+Barcode+128+Text&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+
+
+/*
+TODO
+Rajouter menu mention couleur
+𝙇𝙮𝙘𝙤𝙧𝙖𝙣𝙩
+𝕃𝕪𝕔𝕠𝕣𝕒𝕟𝕥
+Sommaire
+ -1 layer de base 
+ -2 messages generaux
+ -3 messages prives
+ -4 UI
+ -5 Vencord
+ -6 Gestion statut
+ -7 Nitro
+ -8 Avatar Only list
+*/
+
+/*1--Layer de base*--/
+/*custom popout window blur du fond*/
+.theme-dark #app-mount .layers_d4b6c5{
+  margin: var(--window-margin);
+  overflow: hidden;
+  border-radius: var(--window-border-radius);
+  background: var(--window-colour)!important;
+  backdrop-filter: blur(var(--window-blur)) !important;
+}
+
+.bg_d4b6c5 {
+  background-image: var(--background-image);
+  background-attachment: var(--background-attachment, fixed);
+  background-size: var(--background-size, cover);
+  background-position: var(--background-position, center);
+}
+
+
+/*2--Messages generaux--*/
+/*hover des messages*/
+.popoverReactionHoverBar_e986d9{
+    background:rgb(var(--lenoir));
+}
+.popoverReactionHoverBar_e986d9:hover{
+    background:rgb(var(--lenoir));
+}
+.message_d5deea:hover{
+    background:transparent!important;
+    border:none;
+} 
+/*-nouveau messages*/
+.unreadPillCap_c2654d {
+    display: none;
+    right: 50%;
+}
+
+.unreadPill_c2654d {
+    background-color: var(--background-shading);
+    color: #fb5454;
+    font-size: 12px;
+    letter-spacing: 20px;
+    right: 50%;
+    left: 50%;
+    width: 30px;
+}
+
+.isUnread_c2654d {
+    --divider-color:transparent;
+    border: none;
+    background: linear-gradient(90deg,
+    rgba(237, 0, 255, 1) 0%,
+    #fb5454 25%,
+    rgba(0, 0, 0, 0) 50%,
+    #fb5454 75%,
+    rgba(254, 0, 255, 1) 100%);
+    height: 1px;
+}
+
+.unreadPill_c2654d {
+    top: -6px;
+}
+.newMessagesBar_cf58b5 {
+  background-color:rgb(var(--accent));
+}
+/*messages avec liens*/
+.gridContainer_b0068a {
+    max-width: 516px;
+    background: rgb(var(--lenoir));
+    border-radius:4px;
+}
+
+/*Bouton d'activité*/
+.app_a01fb1 button {
+    cursor: pointer;
+    background: transparent;
+}
+
+/* Menu du bouton d'activité*/
+.contentWrapper_f7506e{
+   box-shadow:none;
+   background:transparent;
+}
+
+/*les activités*/
+.container_e5da8b{
+   background:transparent;
+}
+.container_e5da8b:hover{
+
+}
+/*Activité séléctionée*/
+.container_ec8cd2{
+   background:transparent;
+   backdrop-filter:blur(4px);
+}
+/*-Mention*/
+
+
+.theme-dark .mentioned_d5deea:before {
+    background: linear-gradient(135deg, #3b3b3b, var(--accentcolorV2)) !important;
+}
+.theme-dark .mentioned_d5deea {
+    background: linear-gradient( 60deg, rgba(41, 41, 41, 0.3), rgba(var(--accentcolor), 0.9) ) !important;
+}
+ 
+
+/*-Barre d'input*/
+
+.scrollableContainer_bdf0de {
+   background:rgb(var(--lenoir))!important;
+}
+.form_a7d72e {
+    position: relative;
+    flex-shrink: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: -8px;
+}
+.channelTextArea_a7d72e:focus-within  {
+    border-color: rgb(var(--accent));
+    box-shadow: 0 0 calc(var(--input-glow-intensity) * 20px) calc(var(--input-glow-intensity) * 5px) rgb(var(--accent), 0.25);
+}
+
+
+/*Repondre et creer un thread*/
+.replyBar_b11c5e{
+  background:transparent;
+}
+.attachedBars_d0696b{
+  background:transparent;
+}
+.threadSuggestionBar_b11c5e{
+  border-top:none;
+  background:transparent;
+}
+
+/*-Liste salon*/
+
+/*Transparence liste salon a  fix car ca fait bug partage ecran*/
+.platform-win .sidebar_a4d4d9{
+  background:transparent;
+  /*width: 250px;*/
+}
+
+/*bouton + a coter des salons*/
+.addButton_a08117{
+  color:transparent;
+}
+.addButton_a08117:hover{
+  color:var(--main-color);
+}
+/* icone X supprimer salon*/
+.closeButton_c91bad{
+    color:transparent;
+}
+.closeButton_c91bad:hover{
+    color:rgb(var(--main-color));
+}
+/*icone # a cote du salon select*/
+.iconContainer_d8bfb3{
+    color: rgb(var(--main-color));
+}
+
+/*Traits titres*/
+
+.icon_a08117{
+  display:none;
+}
+
+.name_a08117:before{
+    content: "";
+    height: 2px;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to left, rgb(var(--main-color)) 50%, transparent);
+    margin-right: 5px;
+}
+.name_a08117{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(var(--main-color));
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.7;
+}
+.name_a08117:after {
+    content: "";
+    height: 2px;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to right, rgb(var(--main-color)) 50%, transparent);
+    margin-left: 5px;
+}
+
+.collapsed_a08117 .name_a08117:before,
+.collapsed_a08117 .name_a08117:after {
+    flex-grow: 0;
+}
+
+.mainContent_a08117:hover .name_a08117{
+    opacity: 1;
+    color: rgb(var(--main-color));
+}
+
+/*tailles des salons*/
+.link_d8bfb3{
+  padding:10px 16px;
+}
+/*Le scroller a droite*/
+.scroller_e2e187{
+    scrollbar-width: none;
+}
+
+/*Liste des salons*/
+.theme-dark .container_ee69e0{
+  background:transparent;
+}
+/*Le scroller a droite*/
+.scroller_c43953{
+    scrollbar-width: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*3--messages prive--*/
+/*Section liste ami*/
+/*Liste amis side bar*/
+.privateChannels_f0963d{
+  background:transparent;
+}
+
+.theme-dark .scroller_c47fa9{
+  background:transparent;
+}
+/*Scrolleur a droite*/
+.scroller_c47fa9{
+  scrollbar-width: none;
+}
+/*Scroller de la section amis*/
+.scrollerBase_c49869{
+    scrollbar-width: none;
+}
+/*bouton creer mp*/
+.privateChannelRecipientsInviteButtonIcon_c47fa9{
+  display:none;
+}
+.clickable_e44302 .icon_e44302{
+  color:rgb(var(--accent));
+}
+.clickable_e44302 .icon_e44302:hover{
+  color:rgb(var(--accent));
+  filter: drop-shadow(0 0 calc(var(--channel-glow-intensity) * 5px) rgb(var(--accent)));
+}
+
+
+/*Liste amis centre*/
+/*barre de scroll*/
+.peopleList_e0840f .auto_eed6a8 .scrollerBase_eed6a8{
+  visibility:hidden;
+}
+/*traits titre */
+.title_a1cafe{
+   overflow: visible;
+   color: rgb(var(--main-color));
+}
+
+.title_a1cafe:before {
+    content: "";
+    height: 2px;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to left, rgb(var(--main-color)) 50%, transparent);
+    margin-right: 5px;
+}
+.title_a1cafe{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(var(--main-color));
+    font-weight: 700;
+  font-size:50px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.7;
+}
+.title_a1cafe:after {
+    content: "";
+    height: 2px;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to right, rgb(var(--main-color)) 50%, transparent);
+    margin-left: 5px;
+}
+
+.title_a1cafe:hover{
+  color: rgb(var(--main-color));
+  opacity:1;
+}
+/*divider*/
+.peopleListItem_d51464{
+  border-top:none;
+  border-bottom:none;
+}
+
+/* Selection message prive*/
+
+.selected_f5eb4b:before {
+    content: "";
+    position: absolute;
+    margin-top:0px;
+    left: 0;
+    height:41px;
+    width: 2px;
+    background: rgb(var(--accent));
+    box-shadow: 0 0 calc(var(--glow-intensity) * 15px) calc(var(--glow-intensity) * 5px) rgb(var(--accent), 0.2);
+}
+
+.interactive_f5eb4b:hover, .interactive_f5eb4b:focus-within{
+    background:rgb(var(--accent),0.1);
+}
+
+
+.selected_f5eb4b{
+  background: rgb(var(--accent), 0.1);
+}
+
+/*liste des activité des amis*/
+/*divider*/
+.scroller_bf550a{
+  border-left:none;
+}
+.theme-dark .inset_c0f6a6{
+  background:transparent;
+}
+.section_cd82a7{
+  background:rgb(var(--lenoir),0.8);
+}
+/*traits titre */
+.privateChannelsHeaderContainer_c47fa9 .headerText_c47fa9{
+   overflow: visible;
+   color: rgb(var(--main-color));
+}
+
+.privateChannelsHeaderContainer_c47fa9:before {
+    content: "";
+    height: 2px;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to left, rgb(var(--main-color)) 50%, transparent);
+    margin-right: 5px;
+}
+
+.privateChannelsHeaderContainer_c47fa9  {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(var(--main-color));
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.7;
+}
+
+.privateChannelsHeaderContainer_c47fa9:after {
+    content: "";
+    height: 2px;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to right, rgb(var(--main-color)) 50%, transparent);
+    margin-left: 5px;
+}
+
+.privateChannelsHeaderContainer_c47fa9:hover{
+  color: rgb(var(--main-color));
+  opacity:1;
+}
+
+
+.nowPlayingColumn_c2739c{
+  background:transparent!important;
+}
+
+.scroller__7c25e{
+    border-left:none;
+}
+
+.itemCard_f02fcf{
+    border: none;
+}
+.header_bf550a:before {
+    content: "";
+    height: 2px;
+    flex-grow: 1;
+    background: linear-gradient(to left, rgb(var(--main-color)) 50%, transparent);
+    margin-right: 5px;
+}
+
+.header_bf550a{
+    color:rgb(var(--main-color));
+    font-weight: 700;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity:0.8;
+}
+
+
+
+.header_bf550a:after {
+    content: "";
+    height: 2px;
+    flex-grow: 1;
+    background: linear-gradient(to right, rgb(var(--main-color)) 50%, transparent);
+    margin-left: 5px;
+}
+
+
+.header_bf550a {
+    overflow: visible;
+}
+.header_bf550a:hover {
+    opacity: 1;
+}
+
+/*Salon message*/
+.divider_c2654d{
+  border-top:none;
+}
+
+/*4--UI--*/
+
+/*Transparence background d'un appel*/
+
+callContainer_d880dc{
+  background:transparent;
+}
+/*salon vocal sans personne*/
+.wrapper_d880dc.chatSidebarOpen_d880dc .callContainer_d880dc{
+  background : transparent;
+}
+.wrapper_d880dc.minimum_d880dc{
+  background:transparent;
+}
+
+/*animation hover pseudo*/
+.username_f9f2ca:after {
+content: "";
+position: absolute;
+width: 100%;
+transform: scaleX(0);
+height: 1.5px;
+bottom: 0;
+left: 0;
+background-color: currentColor;
+transform-origin: bottom center;
+transition: transform .1s;
+}
+.username_f9f2ca:hover {
+text-decoration: none !important;
+}
+.username_f9f2ca:hover:after {
+transform: scaleX(1);
+transform-origin: bottom center;
+}
+
+/*divider readall-serveur*/
+.guildSeparator_d0c57e{
+  display:none;
+}
+/*hover sur un serveur*/
+.wrapper_f90abb:hover .childWrapper_f90abb{
+    background-color: rgb(var(--accent));
+}
+.wrapper_f90abb.selected_f90abb .childWrapper_f90abb{
+  color:rgb(var(--lenoir));
+  background-color:rgb(var(--accent));
+}
+/*Pill qui indique le serv selectionné*/
+
+/*Bouton ajouter et chercher un serveur*/
+.circleIconButton_db6521{
+  color:rgb(var(--accent ))!important;
+}
+
+.circleIconButton_db6521.selected_db6521{
+  color:rgb(var(--lenoir))!important;
+  background-color:rgb(var(--accent));
+}
+
+/*neon niveau username*/
+.cozy_f5c119 .username__0b0e7 {
+    text-shadow: 0 0 calc(var(--chat-glow-intensity) * 10px) currentColor;
+}
+/*Selection d'un salon / gestion effet neon*/
+
+.wrapper_d8bfb3.modeSelected_d8bfb3 .link_d8bfb3:before {
+    content: "";
+    position: absolute;
+    margin-top:1px;
+    left: 0;
+    height:40px;
+    width: 2px;
+    background: rgb(var(--accent));
+    box-shadow: 0 0 calc(var(--glow-intensity) * 15px) calc(var(--glow-intensity) * 5px) rgb(var(--accent), 0.2);
+}
+
+.wrapper_d8bfb3.modeSelected_d8bfb3 .link_d8bfb3 .icon_d8bfb3,
+.wrapper_d8bfb3.modeSelected_d8bfb3 .link_d8bfb3 .name_d8bfb3 {
+  color: rgb(var(--accent));
+  filter: drop-shadow(0 0 calc(var(--channel-glow-intensity) * 5px) rgb(var(--accent)));
+}
+
+.wrapper_d8bfb3.modeSelected_d8bfb3 .link_d8bfb3 {
+  background: rgb(var(--main-color),0.2);
+}
+
+.wrapper_d8bfb3.modeSelected_d8bfb3 .link_d8bfb3 {
+  background: rgb(var(--accent), 0.1);
+}
+/*
+.wrapper_d8bfb3.modeSelected_d8bfb3 .link_d8bfb3 .icon__67ab4,
+.wrapper_d8bfb3.modeSelected_d8bfb3 .link_d8bfb3 .name_d8bfb3 {
+  color: rgb(var(--accent));
+  filter: drop-shadow(0 0 calc(var(--channel-glow-intensity) * 5px) rgb(var(--accent)));
+}
+*/
+
+/*effet neon salon, unread*/
+.wrapper_d8bfb3.modeUnreadImportant_d8bfb3 .unread_d8bfb3 {
+  box-shadow: 0 0 calc(var(--channel-glow-intensity) * 10px) calc(var(--channel-glow-intensity) * 2px) rgb(var(--unread-colour)/0.3);
+  width: 2px;
+  height: 40px;
+  margin: 0;
+  transform: translateY(-50%);
+  border-radius: 0;
+  left: 0;
+}
+.wrapper_d8bfb3.modeUnreadImportant_d8bfb3 .icon_d8bfb3,
+.wrapper_d8bfb3.modeUnreadImportant_d8bfb3 .name_d8bfb3 {
+  color: #fff;
+  filter: drop-shadow(0 0 calc(var(--channel-glow-intensity) * 5px) rgb(var(--channel-glow-intensity)/0.3)) drop-shadow(0 0 calc(var(--channel-glow-intensity) * 2px) rgb(var(--unread-colour)/0.2));
+}
+.wrapper_d8bfb3.modeUnreadImportant_d8bfb3 .link_d8bfb3 {
+  background:linear-gradient(45deg, rgb(var(--unread-color),0.1), transparent);
+}
+
+
+
+
+
+/*-Boutton de fenetre*/
+.theme-dark .winButtonClose_a934d8 {
+    top: -3.5px;
+    right: 20px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 0px 5px 5px 0px;
+    color: #fff;
+    background: var(--window-colour);
+    backdrop-filter: blur(var(--window-blur));
+    transition: 0.2s;
+}
+
+.theme-dark .winButtonClose_a934d8:hover {
+    top: -3.5px;
+    right: 20px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 0px 5px 5px 0px;
+    color: #fff;
+    background: transparent;
+    transform: rotate(45deg) !important;
+    transition: 0.1s;
+    backdrop-filter: none;
+}
+
+.theme-dark .winButtonMinMax_a934d8:nth-child(3) {
+    top: -3.5px;
+    right: 10px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 0px;
+    color: #fff;
+    background: var(--window-colour);
+    backdrop-filter: blur(var(--window-blur));
+    transition: 0.2s;
+}
+
+
+.theme-dark .winButtonMinMax_a934d8:nth-child(3):hover {
+    top: -3.5px;
+    right: 10px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 0px;
+    color: #fff;
+    background: transparent;
+    transform: rotate(45deg) !important;
+    transition: 0.1s;
+    backdrop-filter: none;
+}
+
+.theme-dark .winButtonMinMax_a934d8:nth-child(2n) {
+    top: -3.5px;
+    right: 0px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px 0px 0px 5px;
+    color: #fff;
+    background: var(--window-colour);
+    backdrop-filter: blur(var(--window-blur));
+    transition: 0.2s;
+}
+.theme-dark .winButtonMinMax_a934d8:nth-child(2n):hover {
+    top: -3.5px;
+    right: 0px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px 0px 0px 5px;
+    color: #fff;
+    background: transparent;
+    transform: rotate(45deg) !important;
+    transition: 0.1s;
+    backdrop-filter: none;
+}
+/*-Logo en haut gauche*/
+.theme-dark .wordmark_a934d8::before {
+    content: "‏‏‎ L y c o r a n t";
+    font-size: 12px;
+    font-family: "Poiret one" !important;
+    position: fixed;
+    color: rgb(255, 255, 255);
+    background: var(--window-colour);
+    backdrop-filter: blur(var(--window-blur));
+    border-radius: 5px;
+    padding: 7px 11px 7px 7px;
+    margin-left: 20px;
+    margin-top: 5px;
+    pointer-events: all;
+    transition: 0.5s ease-in-out;
+}
+.wordmarkWindows_a934d8:hover:before {
+  content: "‏‏‎ L y c o r a n t";
+  letter-spacing: 2px;
+}
+.wordmarkWindows_a934d8{
+    color:transparent;
+}
+
+
+
+/*-colored links */
+/* YouTube */
+[href*="youtu.be"],
+[href*="youtube.com"] {
+    color: #c4302b !important;
+}
+
+/* Twitch */
+[href*="twitch.tv"] {
+    color: #b700ff !important;
+}
+
+/* Discord */
+[href*="discord.com/channels/"] {
+    color: #7289da !important;
+}
+
+[href*="discord.com/channels/"]::before {
+    color: #603cff;
+}
+
+[href*="betterdiscord.app/"],
+[href*="discord.gg/"],
+[href*="discord.com/"],
+[href*="media.discordapp.net/"],
+[href*="cdn.discordapp.com/"] {
+    color: #7289da !important;
+}
+
+/* Twitter */
+[href*="twitter.com/"] {
+    color: #00acee !important;
+}
+
+/* GitHub */
+[href*="github.com"] {
+    color: #00f0a8 !important;
+}
+
+/* Imgur */
+[href*="i.imgur.com"] {
+    color: #89c623 !important;
+}
+
+/* Steam */
+[href*="store.steampowered.com"],
+[href*="https://s.team"],
+[href*="steamcommunity.com/"] {
+    color: #1b2838 !important;
+}
+
+/* Spotify */
+[href*="spotify.com"],
+[href*="open.spotify.com"] {
+    color: #13b94a !important;
+}
+
+/* SoundCloud */
+[href*="soundcloud.com"] {
+    color: #ff5500 !important;
+}
+
+
+
+
+
+/*5--Vencord--*/
+
+/*Bouton read all */
+
+.lookFilled_dd4f85{
+  background-color:transparent!important;
+  margin-left:0px;
+  
+    
+}
+.lookFilled_dd4f85:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+  background: rgb(var(--accent),0.3) !important;
+  transition: 0.1s;
+}
+
+
+/*-plugin spotify*/
+.theme-dark button_afdfd9 {
+  background: transparent!important;
+}
+.theme-dark #vc-spotify-player{
+  left: 0;
+  background:rgb(var(--lenoir))!important;
+  border-radius: 20px;
+  backdrop-filter:blur(5px)!important;
+  right: 0;
+  border-bottom:0;
+}
+#vc-spotify-player::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--vc-spotify-track-image);
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    opacity: .6;
+    z-index: -1;
+}
+#vc-spotify-progress-bar > [class^=slider] [class^=grabber] {
+    width: 25px !important;
+    height: 25px !important;
+    background-color: transparent;
+    background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0c/Glow_Squid_BE1.gif");
+    background-size: cover;
+    border: none;
+    transform: rotate(90deg);
+    margin-left: -16px;
+    inset: 3px 0 0 0px;
+    box-shadow: none;
+    color:rgb(var(--accent),0.1)!important;
+}
+.bar_c7a159{
+    background:transparent;
+}
+.barFill_c7a159{
+  background: rgb(var(--accent));
+}
+
+
+.panel_bd8c76{
+  background: transparent!important;
+}
+.forumOrHome__75784{
+  background: transparent;
+}
+
+/*notification d'update*/ 
+.vc-notification-root:not(.vc-notification-log-wrapper > .vc-notification-root) {
+  backdrop-filter: blur(4px);
+  background: rgb(var(--lenoir),0.8);
+  width : 300px;
+}
+
+
+/*vencord pin dm*/
+.vc-pindms-collapse-icon{
+   display:none;
+}
+/*selection des themes*/
+.vc-addon-card {
+    background: rgb(var(--lenoir),0.6);
+    border: 3px solid rgb(var(--accent));
+}
+
+
+
+
+
+/*6--Gestion statut--*/
+.theme-dark .container_b2ca13{
+  background:transparent;
+}
+.theme-dark .panels_a4d4d9 {
+    background: rgb(var(--lenoir))!important;
+    border-radius: 12px;
+
+}
+
+.theme-dark .panel_bf1a22{
+  background:transparent;
+
+}
+.activityPanel_a4d4d9{
+  border-bottom:transparent;
+  border-radius: 12px;
+}
+.container_adcaac{
+  border-bottom:none;
+  border-top:none;
+  background:transparent;
+  border-radius: 12px;
+}
+/*7--Nitro*/
+.applicationStore_cecc86{
+  background-color: transparent;
+}
+
+/*8--AvatarOnlyMemberList--*/
+
+
+
+.membersWrap_cbd271 {
+    min-width:unset;
+}
+/*-Le background*/
+
+.members_cbd271 {
+  max-width: 65px;
+  min-width: 65px;
+  overflow: visible;
+  box-sizing: border-box;
+  background:rgb(var(--lenoir),0.9);
+  transition: 0.5s ease;
+}
+.members_cbd271:hover {
+  margin-left: -175px;
+  backdrop-filter:blur(4px);
+  max-width: 240px;
+  min-width: 240px;
+}
+
+
+div:not(:hover) > .members_cbd271 > div {
+    padding-top: 10px;
+}
+/*Selection d'un membre*/
+.selected_e9f61e .layout_e9f61e{
+  background:rgb(var(--accent),0.2)!important;
+}
+.memberInner_a31c43:hover{
+  background:rgb(var(--accent),0.9);
+  boxborder-color: rgb(var(--accent));
+  box-shadow: 0 0 calc(var(--input-glow-intensity) * 20px) calc(var(--input-glow-intensity) * 5px) rgb(var(--accent), 0.25);
+}
+/* Fix alignment issues with the members list */
+.container_cbd271,
+.membersWrap_cbd271 {
+    width: 65px;
+    background: transparent;
+}
+
+
+
+
+
+
+/* Make the list fill the window height */
+.membersWrap_cbd271 {
+    height: 100%;
+    background: transparent;
+}
+
+/* Fix the member count addon (vencord) */
+.members_cbd271:not(:hover) > #vc-membercount > div > span:first-child {
+    display: none !important;
+}
+
+.members_cbd271:not(:hover) > #vc-membercount > div {
+    box-sizing: border-box !important;
+    flex: 1 0 100%;
+}
+
+.members_cbd271:not(:hover) > #vc-membercount {
+    flex-wrap: wrap;
+}
+
+
+
+/*-Traits titres*/
+
+.membersGroup_cbd271:before {
+    content: "";
+    height: 2px;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to left, rgb(var(--main-color)) 50%, transparent);
+    margin-right: 5px;
+}
+
+.membersGroup_cbd271{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(var(--main-color));
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    transition: all .15s ease-in-out;
+    opacity: .7;
+}
+
+.membersGroup_cbd271:after {
+    content: "";
+    height: 2px;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to right, rgb(var(--main-color)) 50%, transparent);
+    margin-left: 5px;
+}
+.membersGroup_cbd271:hover{
+  opacity:1;
+}
+
+/*-glow au niveau membres*/
+
+.member_cbd271{
+  background:transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Lycorant Roots*/
+:root{
+/*mains colors*/
+  --main-color: 251,43,43;
+  --accent:255,84,84;
+  --lenoir:10,10,10;
+  --hover-color: #991414;
+  --success-color: #26BD26;
+  --danger-color: #000000;
+  --url-color: var(--main-color);
+  --online-color: #43b581;
+  --idle-color: #faa61a;
+  --dnd-color: #982929;
+  --streaming-color: #593695;
+  --offline-color: #808080;
+  --unread-color: 255,255,255;
+/*background image*/ /*(replace the link to use)*/
+  --background-image:var(--wallpaper);
+/*bg dev suggestions*/
+  --wallpaper: url('https://i.ibb.co/SmFjybk/wallpaperflare-com-wallpaper-1.jpg');
+/*bg favoris
+guts armure
+https://i.ibb.co/VY1p9JQ/berserk-armor-artwork-digital-art-wallpaper-c9d0e85d813a3dbb7657281fd0f1f65d.jpg
+griffith eclipse
+https://i.ibb.co/SmFjybk/wallpaperflare-com-wallpaper-1.jpg
+*/
+/*modern background selection*/
+
+  --modern-dark-bg: url('https://cdn.discordapp.com/attachments/879158025087234098/1015856640530071572/97EAEB95-54C2-4AF3-B70B-5E94A851409.jpeg?size=4096');
+  --modern-light-bg: url('https://cdn.discordapp.com/attachments/879158025087234098/1015856640760754216/E98F8123-8B98-4961-90D7-DCC497A26E4.jpeg?size=4096');
+/*tout ce qui est glow*/
+  --glow-intensity: 0.5; /* Intensity of the glow used around the app. | Set to 0 to disable the glow. | Decimals allowed | Default: 1 */
+  --chat-glow-intensity: var(--glow-intensity);
+  --channel-glow-intensity: var(--glow-intensity);
+  --members-glow-intensity: var(--glow-intensity);
+  --input-glow-intensity: var(--glow-intensity);
+  --server-glow-intensity: var(--glow-intensity);
+
+}
+
+/*window*/ /*dark mode*/
+:root.theme-dark {
+  --window-margin: 20px; /*must be above 20px*/
+  --window-colour: #0009;
+  --window-blur: 5px;
+  --window-border-radius: 10px;
+  --sidebar-colour: rgb(36, 36, 36);
+}
+/*window*/ /*light mode*/
+:root.theme-light {
+  --window-margin: 20px; /*must be above 20px*/
+  --window-colour: rgba(255, 255, 255, 0.6);
+  --window-blur: 5px;
+  --window-border-radius: 10px;
+  --sidebar-colour: rgb(209, 209, 209);
+}
+
+
+/*roots*/ /*both dark and light*/
+:root {
+  --user-name: "Lycoris";
+  --edited-message: " EDITED ✎ ";
+  --font-name: Poppins;
+  --font-size: 13px;
+
+  
+/*glow radial status*/ /*must end in px*/
+  --rs-small-spacing:0px;
+  --rs-large-spacing:0px;
+  --rs-medium-spacing:0px;
+  --rs-small-width: 2.5px; 
+  --rs-medium-width: 3.5px; 
+  --rs-large-width: 4.5px; 
+  --rs-avatar-shape:50%;
+  --rs-online-color:#1df594;
+  --rs-idle-color:#faa61a;
+  --rs-dnd-color:#f04747;
+  --rs-offline-color:#636b75;
+  --rs-streaming-color:#643da7;
+  --rs-invisible-color:#636b75;
+  --rs-phone-visible:block;
+  --rs-phone-color:var(--rs-online-color);
+
+
+/*chillax colours rgb*/ /* Google RGB Picker: https://g.co/kgs/NoY83h */
+  --accentcolor:	  251, 84, 84;	
+/*chillax colours hex*/ /* Google RGB Picker: https://g.co/kgs/NoY83h */
+  --accentcolorV2:     #fb5454;
+     
+     
+/*settings modal root*/
+  --themelightsettingsmodalbackground: rgb(223, 223, 223);
+  --themedarksettingsmodalbackground: rgb(51, 49, 53);
+  --settingsmodalwidth: 960px;
+  --settingsmodalheight: 80vh;	
+}
+     
+/*discord transparency*//*roots*/ /*theme dark*/
+  .theme-dark {
+  --text-link:rgb(var(--accentcolor),0.8);
+  --background-message-hover: rgba(255, 255, 255, 0.055);
+  --header-primary: #fff;
+  --header-secondary: #b9bbbe;
+  --text-normal: #dcddde;
+  --text-muted:rgb(var(--accentcolor)); 
+  --channels-default: #8e9297;
+  --interactive-normal: #b9bbbe;
+  --interactive-hover: #dcddde;
+  --interactive-active: #fff;
+  --interactive-muted: #4f545c;
+  --background-primary: transparent;
+  --background-secondary: transparent;
+  --background-tertiary: transparent;
+  --background-accent: rgb(36, 36, 36);
+  --activity-card-background: transparent;
+  --deprecated-panel-background: transparent;
+}
