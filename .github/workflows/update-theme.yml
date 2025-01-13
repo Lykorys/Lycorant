@@ -1,0 +1,34 @@
+name: Update Theme
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Vérifie les mises à jour chaque jour à minuit
+  workflow_dispatch: # Permet de lancer manuellement le workflow
+
+jobs:
+  update-theme:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Étape 1 : Vérification du code source
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    # Étape 2 : Téléchargement des variables de Vencord
+    - name: Download Vencord Variables
+      run: curl -o variables.css https://vencord.com/variables.css
+
+    # Étape 3 : Recompiler le thème (si SCSS ou autre préprocesseur est utilisé)
+    - name: Compile SCSS
+      run: |
+        npm install -g sass
+        sass --update theme.scss:theme.css
+
+    # Étape 4 : Commit et Push des modifications
+    - name: Commit and Push Updates
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add .
+        git commit -m "Update theme with latest Vencord variables" || echo "Nothing to commit"
+        git push
